@@ -12,6 +12,8 @@ def product_of_all_other_numbers(arr):
     # how to do that in O(n) time?
     # multiply numbers to the left of index by numbers to right of index
 
+    # NOTE: this might very well be O(n^2) time complexity
+
     result_list = []
     for index in range(0, len(arr)):
         if index == 0:
