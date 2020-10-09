@@ -2,7 +2,9 @@
 Input: a List of integers
 Returns: a List of integers
 '''
-def moving_zeroes(arr):
+
+# -------------- FIRST PASS ------------------------------------
+def first_pass(arr):
     # Iterate on the enumerated array
     # if the value is zero, remove it from the array and append it
     # check to see if all elements [index:] are zeroes, if so stop.
@@ -29,6 +31,17 @@ def moving_zeroes(arr):
             zero_indexes.append(index)
             arr.append(element)
     return arr
+
+
+# ---------------- REFACTORED METHOD ------------------------------
+def abolute_val(element):
+    return abs(element)
+
+def moving_zeroes(arr):
+    # Complete a reversed sort on the array.
+    # Need to account for negative integers in the array.
+    sorted_arr = sorted(arr, key=abolute_val, reverse=True)
+    return sorted_arr
 
 if __name__ == '__main__':
     # Use the main function here to test out your implementation
