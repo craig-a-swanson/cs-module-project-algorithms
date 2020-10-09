@@ -43,6 +43,12 @@ def moving_zeroes(arr):
     sorted_arr = sorted(arr, key=abolute_val, reverse=True)
     return sorted_arr
 
+# ----------------- FUTURE REFACTOR ----------------------------
+# For an O(1) space complexity, we could do an in place merge sort
+# Use absolute values for integers and do a reverse sort.
+# Time complexity would be O(nlogn)
+
+
 if __name__ == '__main__':
     # Use the main function here to test out your implementation
     arr = [0, 3, 1, 0, -2]
